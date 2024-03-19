@@ -73,7 +73,8 @@ let red_color = unknown_c();
 red_color.set([255, 0, 0]);
 
 (async () => {
-	const image = await Jimp.read('download.jpg');
+	if (!process.argv[2]) throw new Error("The image argument was not found in this command! Run this script like: `node . [YOUR IMAGE FILE HERE W/ EXTENSION, THIS IS A PLACEHOLDER]`");
+	const image = await Jimp.read(process.argv[2]);
 	image.flip(false, true);
 	let widthPixels = image.bitmap.width;
 	let heightPixels = image.bitmap.height;
@@ -199,5 +200,5 @@ red_color.set([255, 0, 0]);
 		})
 	}
 	fs.writeFileSync('out.obj', obj);
-	$.liveEditor({ info: true });
+	$.exportToSavefile({ info: true });
 })();
