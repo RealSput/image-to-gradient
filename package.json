@@ -1,0 +1,16 @@
+{
+  "name": "img-to-gradient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@g-js-api/g.js": "^2.6.1",
+    "jimp": "^0.22.12"
+  }
+}
